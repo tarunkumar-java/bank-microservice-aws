@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Build gateway-service
-      - cd .gatewayserver
+      - cd gatewayserver
       - mvn clean install -DskipTests
 
       - echo Logging in to Amazon ECR...
