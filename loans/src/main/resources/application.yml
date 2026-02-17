@@ -19,7 +19,7 @@ spring:
       ddl-auto: update
     show-sql: true
   config:
-    import: "optional:configserver:http://configserver:8071/"
+    import: "optional:configserver:http://configserver.bank.local:8071/"
 
 management:
   endpoints:
@@ -52,7 +52,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eurekaserver:8761/eureka/
+      defaultZone: http://eurekaserver.bank.local:8761/eureka/
 
 info:
   app:
