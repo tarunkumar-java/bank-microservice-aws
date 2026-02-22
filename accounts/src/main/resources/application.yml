@@ -8,10 +8,10 @@ spring:
   profiles:
     active: "prod"
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
+    url: jdbc:postgresql://microservices-db.c5gj6mqae4k3.ap-south-1.rds.amazonaws.com:5432/accounts_db
+    username: postgres
+    password: tarunkumar
+    driver-class-name: org.postgresql.Driver
   h2:
     console:
       enabled: true

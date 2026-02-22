@@ -1,23 +1,25 @@
 server:
   port: 9000
+
 spring:
   application:
     name: "cards"
+
   profiles:
     active: "prod"
+
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
-  h2:
-    console:
-      enabled: true
+    url: jdbc:postgresql://microservices-db.c5gj6mqae4k3.ap-south-1.rds.amazonaws.com:5432/cards_db
+    username: postgres
+    password: tarunkumar
+    driver-class-name: org.postgresql.Driver
+
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
+
   config:
     import: "optional:configserver:http://configserver.bank.local:8071/"
 
